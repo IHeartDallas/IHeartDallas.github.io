@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Math Quiz</title>
+  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href="css/page.css" rel="stylesheet">
+  <link href="css/layout.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="grid">
+    <header>Math Game App</header>
+    <main>
+      <h1>Order of Operation</h1>
+
+      <!--Question One--------------------------------------------------------------->
+      <form id="quiz-form1">
+        <label>
+          6 + (4) (13) + 12<br>
+
+          <select id="quiz-answer1"><br>
+            <option value="Select">Select the correct answer</option>
+            <option value="324">324</option>
+            <option value="70">70</option>
+            <option value="250">250</option>
+          </select>
+
+        </label> <br><br><br>
+        <button type="submit">Check Answer</button>
+      </form><br>
+      <div id="result1"></div> <br>
+      <!--Question Two------------------------------------------------------------->
+      <form id="quiz-form2">
+        <label>
+          8 / 4 * 2<br>
+
+          <select id="quiz-answer2"><br>
+            <option value="Select">Select the correct answer</option>
+            <option value="4">4</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+
+        </label> <br><br><br>
+        <button type="submit">Check Answer</button>
+      </form><br>
+      <div id="result2"></div> <br>
+      <!--Question Three-------------------------------------------------------------->
+      <form id="quiz-form3">
+        <label>
+          5(-5 + 6) * 6 &sup2;<br>
+
+          <select id="quiz-answer3"><br>
+            <option value="Select">Select the correct answer</option>
+            <option value="1080">1080</option>
+            <option value="30">30</option>
+            <option value="180">180</option>
+          </select>
+
+        </label> <br><br><br>
+        <button type="submit">Check Answer</button>
+      </form><br>
+      <div id="result3"></div> <br> <br>
+      <div id="correct"></div>
+
+      <!-- <h2>Question:</h2>
+      <button id="generate-btn" type="submit">Press Button and Pistol Pete will Retrieve a Question</button><br><br><br>
+      <div id="quote"></div><br><br>
+      <input id="answer" placeholder="Enter Answer"></input>-->
+    </main>
+    <div class="about">Order of Operation<br><br>
+      <img src="order-of-operations-05-01.gif" alt="order-of-operations"> <br><br>
+      <ol>
+        <li>Parenthesis</li>
+        <li>exponents</li>
+        <li>Multiply & Divide(left to right)</li>
+        <li>Add & Subtract(left to right)</li>
+      </ol>
+    </div>
+    <!--<div class="news">News</div>
+  <div class="links">Links</div>-->
+    <div class="ads">
+      <h2>Additional links</h2>
+      <a
+        href="https://www.khanacademy.org/math/pre-algebra/pre-algebra-arith-prop/pre-algebra-order-of-operations/v/introduction-to-order-of-operations">Khan
+        Academy</a>
+    </div>
+    <footer>
+      <p>&copy; 2020 E(Emma) & T(Terese) Math App</p>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+
+    // When the user submits the form,
+    //   Check what answer they picked
+    //   And tell them if they're correct
+
+    // submit
+    // Question One
+
+    var correct = 0;
+
+    $("#quiz-form1").on("submit", function (event) {
+      event.preventDefault();
+      var $answer = $("#quiz-answer1");
+      var answer = $answer.val();
+
+      if (answer === "70") {
+        $("#result1").text("Woweeee! You got it! WOOO PARTY!");
+        correct++;
+        console.log(correct);
+      } else {
+        $("#result1").text("Try again!");
+      }
+
+    });
+
+    // Question Two
+    $("#quiz-form2").on("submit", function (event) {
+      event.preventDefault();
+      let $answer2 = $("#quiz-answer2");
+      let answer2 = $answer2.val();
+
+      if (answer2 === "4") {
+        $("#result2").text("Woweeee! You got it! WOOO PARTY!");
+        correct++;
+        console.log(correct);
+      } else {
+        $("#result2").text("Try again!");
+      }
+
+    });
+
+    // Question Three
+    $("#quiz-form3").on("submit", function (event) {
+      event.preventDefault();
+      let $answer3 = $("#quiz-answer3");
+      let answer3 = $answer3.val();
+
+      if (answer3 === "180") {
+        $("#result3").text("Woweeee! You got it! WOOO PARTY!");
+        correct++;
+        console.log(correct);
+      } else {
+        $("#result3").text("Try again!");
+      }
+      let totalCorrect = document.getElementById("correct");
+      totalCorrect.append(`The number corrct:  ${correct}`);
+
+    });
+
+
+
+  </script>
+
+
+</body>
+
+</html>

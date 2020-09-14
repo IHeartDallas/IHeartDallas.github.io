@@ -5,47 +5,114 @@
 * {
 	box-sizing: border-box;
 }
-
 body {
   font-size: 1rem;
   line-height: 1.5;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
   text-align: center;
   margin: 0;
 }
-a {
-  color: #278da4;
-  text-decoration: none;
-}
-p {
-  margin-bottom: 1.25em;
-}
-.main-content {
-  margin: 2em auto;
-}
-.card {
-  padding: 1.5em 1em;
-  border: 1px solid #e1e1e1;
-  border-radius: 0.25em;
-}
-.card h1 {
-  font-family: 'Bree Serif', serif;
-  color: #39abcd; 
-  margin: 0;
-  line-height: 1.25;
-}
-.btn {
-  font-size: 0.85em;
+.grid > * {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.75em 1.5em;
-  background-color: #39abcd;
-  border-radius: 0.35em;
-  display: block;
-  height: 10px;
+  padding: 1em;
+  border-radius: 0.3em;
 }
-.material-icons {
-  color: #42b4d6; 
-  font-size: 2.25em;
+header {
+  background-color: #3398cc;
 }
+main {
+  background-color: #976698;
+}
+
+button {
+  height: 50px;
+  width: 120px;
+  box-shadow: 5px 10px;
+  font-size: 20px;
+}
+input {
+  height: 40px;
+  width: 400px;
+  box-shadow: 5px 10px;
+}
+
+option{
+  font-size:2em;
+  border-width:6px;
+  padding:1em;
+}
+
+.grid div {
+  background-color: #8494a4;
+ 
+}
+
+#quote{
+  font-size: 35px;
+  height: 50px; 
+}
+
+#answer{
+  font-size: 20px;
+}
+
+ol li {
+  padding: 5px;
+  justify-content: left;
+}
+
+ul li {
+  list-style: none;
+}
+footer {
+  background-color: #33cacb;
+}
+
+#quiz-wrap {
+  font-family: arial, sans-serif;
+}
+
+
+.main-header,
+.nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-header {
+	padding-top: 2em;
+	background-color: rgb(13, 0, 128);
+	border-radius:  10px;
+}
+
+.site-logo {
+	width: 110px;
+	align-self: center;
+}
+
+.nav {
+	margin-top: 1.5em;
+	background-color: paleturquoise;
+	color: white;
+	border:2px solid rgb(234, 230, 250);
+}
+
+.nav a {
+	display: block;
+	color: black;
+	font-size: 1.125em;
+	font-weight: 300;
+	text-align: center;
+	padding: .4em;
+	border-bottom: 1px solid #ebecec;
+}
+
+.nav a:hover {
+	color: #0b0b0b;
+	border-bottom-color:  rgb(13, 0, 128);
+}
+

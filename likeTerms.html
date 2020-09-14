@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Math Quiz</title>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid" class="main-header">
+        <header>
+            Math App
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About(Coming Soon)</a></li>
+            </ul>
+        </header>
+        <main>
+            <h1>Adding Like Terms</h1>
+
+            <!--Question One--------------------------------------------------------------->
+            <form id="quiz-form1">
+                <label>
+                    4z - 8 + z - 6 - 5z<br>
+
+                    <select id="quiz-answer1"><br>
+                        <option value="Select">Select the correct answer</option>
+                        <option value="-14">-14</option>
+                        <option value="14 + z">14 + z</option>
+                        <option value="14">14</option>
+                    </select>
+
+                </label> <br><br><br>
+                <button type="submit">Check Answer</button>
+            </form><br>
+            <div id="result1"></div> <br>
+            <!--Question Two------------------------------------------------------------->
+            <form id="quiz-form2">
+                <label>
+                    3m - 8 - 2m - 9 + 8 - 2m<br>
+
+                    <select id="quiz-answer2"><br>
+                        <option value="Select">Select the correct answer</option>
+                        <option value="m + 8">m + 8</option>
+                        <option value="-m - 9">-m - 9</option>
+                        <option value="-9">-9</option>
+                    </select>
+
+                </label> <br><br><br>
+                <button type="submit">Check Answer</button>
+            </form><br>
+            <div id="result2"></div> <br>
+            <!--Question Three-------------------------------------------------------------->
+            <form id="quiz-form3">
+                <label>
+                    8b - 9 - b + 7b + 4 - 9<br>
+
+                    <select id="quiz-answer3"><br>
+                        <option value="Select">Select the correct answer</option>
+                        <option value="b + 14">b + 14</option>
+                        <option value="14b - 14">14b - 14</option>
+                        <option value="-14">-14</option>
+                    </select>
+
+                </label> <br><br><br>
+                <button type="submit">Check Answer</button>
+            </form><br>
+            <div id="result3"></div> <br> <br>
+            <div id="correct"></div>
+
+            <!-- <h2>Question:</h2>
+      <button id="generate-btn" type="submit">Press Button and Pistol Pete will Retrieve a Question</button><br><br><br>
+      <div id="quote"></div><br><br>
+      <input id="answer" placeholder="Enter Answer"></input>-->
+        </main>
+        <div class="about">Combining Like Terms<br><br>
+            <img src="likeTerms.png" alt="combining like terms"> <br><br>
+            <ol>
+                <li>Combine like variables </li>
+                <li>Combine constants </li>
+                <li>Solve the equation</li>
+            </ol>
+        </div>
+        <!--<div class="news">News</div>
+  <div class="links">Links</div>-->
+        <div class="ads">
+            <h2>Additional links</h2>
+            <a href="https://www.chilimath.com/lessons/introductory-algebra/combining-like-terms"> Chili Math</a>
+        </div>
+        <footer>
+            <p>&copy; 2020 E(Emma) & T(Terese) Math App</p>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+
+        // When the user submits the form,
+        //   Check what answer they picked
+        //   And tell them if they're correct
+
+        // submit
+        // Question One
+
+        var correct = 0;
+
+        $("#quiz-form1").on("submit", function (event) {
+            event.preventDefault();
+            var $answer = $("#quiz-answer1");
+            var answer = $answer.val();
+
+            if (answer === "-14") {
+                $("#result1").text("Woweeee! You got it! WOOO PARTY!");
+                correct++;
+                console.log(correct);
+            } else {
+                $("#result1").text("Try again!");
+            }
+
+        });
+
+        // Question Two
+        $("#quiz-form2").on("submit", function (event) {
+            event.preventDefault();
+            let $answer2 = $("#quiz-answer2");
+            let answer2 = $answer2.val();
+
+            if (answer2 === "-m - 9") {
+                $("#result2").text("Woweeee! You got it! WOOO PARTY!");
+                correct++;
+                console.log(correct);
+            } else {
+                $("#result2").text("Try again!");
+            }
+
+        });
+
+        // Question Three
+        $("#quiz-form3").on("submit", function (event) {
+            event.preventDefault();
+            let $answer3 = $("#quiz-answer3");
+            let answer3 = $answer3.val();
+
+            if (answer3 === "14b - 14") {
+                $("#result3").text("Woweeee! You got it! WOOO PARTY!");
+                correct++;
+                console.log(correct);
+            } else {
+                $("#result3").text("Try again!");
+            }
+            let totalCorrect = document.getElementById("correct");
+            totalCorrect.append(`The number corrct:  ${correct}`);
+
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
